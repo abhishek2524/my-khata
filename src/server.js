@@ -10,7 +10,7 @@ const userRoutes = require("./routes/user");
 app.use(bodyparser.json());
 app.use(
   bodyparser.urlencoded({
-    extended: false,
+    extended: true,
   })
 );
 

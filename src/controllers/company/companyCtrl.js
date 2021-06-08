@@ -1,4 +1,4 @@
-const { addCompany } = require("../handlemodel/handleCompanyModel");
+const { addCompany } = require("../../handlemodel/handleCompanyModel");
 const CompanyModel = require("./../../models/CompanyModel");
 const checkIsSalary = async (req, res, next) => {
   try {

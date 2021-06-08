@@ -21,7 +21,7 @@ const transactionSchema = new schema({
   },
 });
 const bankSchema = new schema({
-  bankname: {
+  bankID: {
     type: String,
     required: true,
   },

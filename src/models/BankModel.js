@@ -12,12 +12,16 @@ const transactionSchema = new schema({
     enum: ["withdrawal", "deposit"],
   },
   amount: {
-    type: String,
-    default: "0",
+    type: Number,
+    default: 0,
   },
   isSalary: {
     type: Boolean,
     default: false,
+  },
+  comments: {
+    type: String,
+    default: "-",
   },
 });
 const bankSchema = new schema({

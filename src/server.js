@@ -3,12 +3,10 @@ require("./db");
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 5000;
 const cors = require("cors");
 
-const options = {
-};
-app.use(cors(options));
+app.use(cors())
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 

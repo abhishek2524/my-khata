@@ -7,7 +7,6 @@ const PORT = process.env.PORT || 7000;
 const cors = require("cors");
 
 const options = {
-  "Cross-origin-embedder-policy": "require-corp",
 };
 app.use(cors(options));
 // parse application/x-www-form-urlencoded

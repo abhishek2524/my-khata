@@ -6,10 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 7000;
 const cors = require("cors");
 
-const options = {
-  "Cross-origin-embedder-policy": "require-corp",
-};
-app.use(cors(options));
+app.use(cors());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -18,6 +15,9 @@ app.use(bodyParser.json());
 
 const userRoutes = require("./routes/user");
 const bankRoute = require("./routes/bank");
+app.use("/", (req, res) => {
+  res.send("workign");
+});
 app.use("/user", userRoutes);
 app.use("/bank", bankRoute);
 
